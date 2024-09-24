@@ -8,6 +8,7 @@
 *{
     margin: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -18,4 +19,18 @@ body{
 #title{
     text-align: center;
     color: #FFF4EA;
+    font-size: 35px;
+    margin-bottom: 60px;
+}
+
+.container{
+    display: flex;
+}
+
+.box{
+    background-color: #7EACB5;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    display: flex;
 }
