@@ -1,4 +1,21 @@
+/* Color Palette
+    7EACB5 - blue
+    FFF4EA - white
+    FADFA1 - yellow
+    C96868 - red
+*/
+
 *{
     margin: 0;
     font-family: sans-serif;
+}
+
+body{
+    margin: 20px;
+    background-color: #C96868;
+}
+
+#title{
+    text-align: center;
+    color: #FFF4EA;
 }
