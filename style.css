@@ -30,14 +30,23 @@ body{
     flex-wrap: wrap;
 }
 
+
+/* Boxes */
 .box{
     background-color: #7EACB5;
     height: 300px;
     min-width: 200px;
     max-width: 338px;
     flex: 0 1 calc(25% - 10px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
 }
 
+
+/* Button */
 .button{
     display: flex;
     align-items: center;
@@ -67,9 +76,34 @@ button:active{
 }
 
 
+
+/* Responsiveness */
 @media (max-width: 768px){
     .box, .button{
         flex: 1 1 100%;
         max-width: 100%;
     }
+}
+
+
+/* Music Player Design */
+.box h1{
+    font-family: Fredoka;
+    color: #FADFA1;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box img{
+    width: 214.5px;
+    height: 175.2px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.box .line{
+    width: 180px;
+    background-color: #FFF4EA;
+    height: 4px;
+    border-radius: 10px;
 }
