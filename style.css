@@ -12,10 +12,19 @@
 }
 
 body{
-    margin: 20px;
     background-color: #C96868;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+.content{
+    flex: 1;
+    margin: 20px;
+}
+
+
+/* Top */
 #title{
     text-align: center;
     color: #FFF4EA;
@@ -37,6 +46,7 @@ body{
     gap: 150px 50px;
     padding: 10px;
     flex-wrap: wrap;
+    margin-bottom: 60px;
 }
 
 
@@ -142,8 +152,27 @@ button:active{
     text-decoration: none;
 }
 
+
+/* Responsiveness */
 @media screen and (max-width: 440px){
     button{
         top: 20px;
     }
+}
+
+
+/* Footer */
+footer{
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    width: 100%;    
+    border-top: black 1px solid;
+    opacity: 0.8;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
 }
