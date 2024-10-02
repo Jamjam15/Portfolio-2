@@ -34,8 +34,8 @@ addBoxButton.addEventListener("click", function(){
 
 /* ---------------------------------Random Cat------------------------------------- */
 
-function randomPosition(max){
-    return Math.floor(Math.random() * max);
+    function randomPosition(max){
+        return Math.floor(Math.random() * max);
 }
 
 function addRandomCatIcons(numIcons){
@@ -47,7 +47,7 @@ function addRandomCatIcons(numIcons){
         catIcon.classList.add('cat-icon');
 
         const randomX = randomPosition(window.innerWidth - 50);
-        const randomY =randomPosition(window.innerHeight - 50);
+        const randomY = randomPosition(window.innerHeight - 50);
     
         catIcon.style.width = "50px";
         catIcon.style.height = "50px";
@@ -59,5 +59,6 @@ function addRandomCatIcons(numIcons){
     }
 }
 
+console.log();
 addRandomCatIcons(20);
 
