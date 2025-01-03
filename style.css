@@ -16,6 +16,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .cat-icon{
@@ -51,7 +52,6 @@ body{
 
 .container{
     display: flex;
-    justify-content: center;
     gap: 150px 50px;
     padding: 10px;
     flex-wrap: wrap;
@@ -70,6 +70,10 @@ body{
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
+}
+
+.box h1{
+    text-align: center;
 }
 
 

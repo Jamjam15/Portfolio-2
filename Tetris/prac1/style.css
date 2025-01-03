@@ -1,0 +1,22 @@
+    .grid{
+        width: 400px;
+        height: 800px;
+        background-color: yellow;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .grid div{
+        width: 40px;
+        height: 40px;
+        border: solid 1px black;
+        box-sizing: border-box;
+    }
+
+    .l{
+        background-color: red;
+    }
+
+    .tetromino{
+        background-color: red;
+    }
