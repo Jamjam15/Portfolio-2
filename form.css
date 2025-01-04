@@ -8,7 +8,40 @@
 }
 
 #form{
-    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 109, 100);
     width: 600px;
-    height: 500px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 5px dashed white;
+}
+
+#form label{
+    font-family: Fredoka;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#form input{
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+#form input::placeholder{
+    font-family: Fredoka;
+    color: rgb(253, 139, 156);
+    text-align: center;
+}
+
+#form input:focus{
+    font-family: Fredoka;
+    color: rgb(253, 139, 156);
 }
