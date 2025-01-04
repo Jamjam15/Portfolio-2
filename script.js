@@ -1,41 +1,46 @@
-/* ---------------------------------Add Box Button------------------------------------- */
-// Select Button and the Container
-let addBoxButton = document.getElementById("addBoxButton");
+let openFormContainer = document.getElementById("addBoxButton");
+let containerForm = document.getElementById("container-form");
+let closeButton = document.getElementsByClassName("x-btn")[0];
+let submitButton = document.querySelector(".submit-btn");
 let container = document.querySelector(".container");
 
-// Add Function to Button
-addBoxButton.addEventListener("click", function(){
-    
+openFormContainer.addEventListener("click", function(){
+    containerForm.classList.add("active");
+})
+
+closeButton.addEventListener("click", function(){
+    containerForm.classList.remove("active")
 })
 
 
-/* ---------------------------------Random Cat------------------------------------- */
+submitButton.addEventListener("click", function(){
+    let projectName = document.getElementById("pname").value.trim();
 
-//     function randomPosition(max){
-//         return Math.floor(Math.random() * max);
-// }
+    if (projectName){
+        let newBox = document.createElement("div");
+        newBox.classList.add("box");
 
-// function addRandomCatIcons(numIcons){
-//     let body = document.body;
+        newBox.innerHTML = `
+                    <h1>${projectName}</h1>
+                    <img src="./images/tetris.jfif" alt="" class="picture">
+                    <div class="line"></div>
+                    <div class="number">
+                        <li>02:20</li>
+                        <li>-00:58</li>
+                    </div>
+                    <div class="controls">
+                        <div><img src="./images/rewind.png" alt="" class="icons"></div>
+                        <div><img src="./images/pause-button.png" alt="" class="icons"></div>
+                        <div><img src="./images/fast-forward (1).png" alt="" class="icons"></div>
+                    </div>`
 
-//     for(let i = 0; i < numIcons; i++){
-//         let catIcon = document.createElement('img');
-//         catIcon.src = './images/cat.png';
-//         catIcon.classList.add('cat-icon');
+        container.appendChild(newBox);
 
-//         const randomX = randomPosition(window.innerWidth - 50);
-//         const randomY = randomPosition(window.innerHeight - 50);
-    
-//         catIcon.style.width = "50px";
-//         catIcon.style.height = "50px";
-//         catIcon.style.position = "absolute";
-//         catIcon.style.left = `${randomX}px`;
-//         catIcon.style.top = `${randomY}px`
-    
-//         body.appendChild(catIcon);
-//     }
-// }
+        document.getElementById("pname").value = "";
 
-// console.log();
-// addRandomCatIcons(20);
+        containerForm.classList.remove("active");
+    } else {
+        alert("Please enter a project name");
+    }
 
+})
